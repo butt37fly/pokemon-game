@@ -1,12 +1,15 @@
 <template>
-  <h1>Hello World</h1>
+  <PokemonPage />
 </template>
 
 <script>
+import PokemonPage from './pages/PokemonPage.vue'
 
 export default {
   name: 'App',
-  components: {}
+  components: {
+    PokemonPage
+  }
 }
 </script>
 
