@@ -1,8 +1,10 @@
 <template>
-  <h1>¿Quién es este Pokémon?</h1>
+  <section class="c-pokemon-page">
+    <h1 class="o-title">¿Quién es este Pokémon?</h1>
 
-  <PokemonPicture />
-  <PokemonOptions />
+    <PokemonPicture />
+    <PokemonOptions />
+  </section>
 </template>
 
 <script>
@@ -17,3 +19,15 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.c-pokemon-page {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+  min-height: 100dvh;
+  width: 100%;
+}
+</style>

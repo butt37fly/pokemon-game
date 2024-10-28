@@ -40,4 +40,9 @@ body {
   color: var(--c-text);
   background: radial-gradient(circle, var(--c-purple-02) 0%, var(--c-purple-01) 100%);
 }
+
+.o-title{
+  font-size: 32px;
+  margin-bottom: 12px;
+}
 </style>
