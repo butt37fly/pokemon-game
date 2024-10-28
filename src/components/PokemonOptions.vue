@@ -4,6 +4,6 @@
 
 <script>
 export default {
-  name: "PokemonOptions",
+  name: "Pokemon Options",
 }
 </script>
