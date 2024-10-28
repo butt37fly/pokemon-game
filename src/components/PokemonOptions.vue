@@ -37,10 +37,10 @@ export default {
     border: 1px solid var(--hover);
     color: var(--color);
     cursor: pointer;
+    font-weight: 600;
     padding: 12px;
     text-align: center;
     transition: .3s;
-    font-weight: 600;
 
     &:hover{
       background-color: var(--hover);
