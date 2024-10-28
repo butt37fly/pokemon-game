@@ -20,6 +20,8 @@ export default {
   --c-grey: #cccccc;
   --c-purple-01: #0B0417;
   --c-purple-02: #291746;
+  --c-red-01: #BD0C12;
+  --c-green-01: #048733;
 
   --c-background: var(--c-purple-01);
   --c-text: var(--c-white);
