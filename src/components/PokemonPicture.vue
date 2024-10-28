@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: "PokemonOptions",
+  name: "Pokemon Picture",
 }
 </script>
 
