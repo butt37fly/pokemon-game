@@ -37,19 +37,19 @@ export default {
   justify-content: center;
   position: relative;
   width: var(--width);
+}
 
-  & .c-pokemon-picture__img {
-    aspect-ratio: 1 !important;
-    filter: brightness(0);
-    object-fit: contain;
-    position: absolute;
-    user-select: none;
-    width: var(--width);
-  }
+.c-pokemon-picture__img {
+  aspect-ratio: 1 !important;
+  filter: brightness(0);
+  object-fit: contain;
+  position: absolute;
+  user-select: none;
+  width: var(--width);
+}
 
-  & .c-pokemon-picture__img--visible {
-    animation: fadeIn .3s forwards;
-  }
+.c-pokemon-picture__img--visible {
+  animation: fadeIn .3s forwards;
 }
 
 @keyframes fadeIn {
