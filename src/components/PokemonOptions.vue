@@ -1,17 +1,30 @@
 <template>
   <div class="c-pokemon-options">
     <ul class="c-pokemon-options__list">
-      <li class="c-pokemon-options__item">Pokemon name</li>
-      <li class="c-pokemon-options__item">Pokemon name</li>
-      <li class="c-pokemon-options__item c-pokemon-options__item--wrong">Pokemon name</li>
-      <li class="c-pokemon-options__item c-pokemon-options__item--correct">Pokemon name</li>
+      <li v-for="pokemon in options" :key="pokemon.id" class="c-pokemon-options__item">
+        {{ upperCaseFirst(pokemon.name) }}
+      </li>
     </ul>
   </div>
 </template>
 
 <script>
+
 export default {
   name: "Pokemon Options",
+  props: {
+    options: {
+      type: Array,
+      Required: true,
+      default: []
+    }
+  },
+  methods: {
+    upperCaseFirst(string) {
+      const firstChar = string.slice(0, 1).toUpperCase()
+      return `${firstChar}${string.slice(1)}`
+    }
+  }
 }
 </script>
 
@@ -19,7 +32,7 @@ export default {
 .c-pokemon-options {
   width: 250px;
 
-  & .c-pokemon-options__list{
+  & .c-pokemon-options__list {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -27,9 +40,9 @@ export default {
     width: 100%;
   }
 
-  & .c-pokemon-options__item{
+  & .c-pokemon-options__item {
     --background: var(--c-white);
-    --color: var(--c-black);  
+    --color: var(--c-black);
     --hover: var(--c-grey);
 
     background-color: var(--background);
@@ -42,21 +55,21 @@ export default {
     text-align: center;
     transition: .3s;
 
-    &:hover{
+    &:hover {
       background-color: var(--hover);
       border-color: var(--hover);
     }
   }
 
-  & .c-pokemon-options__item--wrong{
+  & .c-pokemon-options__item--wrong {
     --background: var(--c-red-01);
-    --color: var(--c-white);  
+    --color: var(--c-white);
     --hover: var(--c-red-01);
   }
-  
-  & .c-pokemon-options__item--correct{
+
+  & .c-pokemon-options__item--correct {
     --background: var(--c-green-01);
-    --color: var(--c-white);  
+    --color: var(--c-white);
     --hover: var(--c-green-01);
   }
 }
